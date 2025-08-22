@@ -24,6 +24,10 @@ L = f*v*dx
 u = Function(V)
 solve(a == L, u, bc)
 
+# Plot the mesh and the solution
+plot(mesh, title='Mesh')
+plot(u, title='Solution')
+
 #Visualize the output
 file = File("poisson_solution.pvd")
 file << u
